@@ -165,3 +165,49 @@ A:
 - USD starts with one file and gathers all the layers it finds by following all references.
 - IFC 5 leaves the order of the layers (files/data-streams) to the end-user(s).
 - While USD focusses on one 'truth' that is displayed, IFC 5 expects software tools to show differences of opinion from different layers.
+
+# Add a 3rd window
+
+```json
+[
+  {
+    "disclaimer": "2024-11-12 update of the examples. (C) buildingSMART International. Published under CC BY-ND 4.0."
+  },
+  {
+    "def": "over",
+    "type": "UsdGeom:Xform",
+    "name": "N93791d5d5beb437bb8ec2f1f0ba4bf3b",
+    "children": [
+      {
+        "def": "def",
+        "name": "Window_002",
+        "inherits": [
+          "</N592504dc469a44d69ae8c801b591613c>"
+        ]
+      }
+    ]
+  },
+  {
+    "def": "class",
+    "type": "UsdGeom:Xform",
+    "comment": "this is the instance of Window_002",
+    "name": "N592504dc469a44d69ae8c801b591613c",
+    "inherits": [
+     "</N25503984660543a18597eae657ff5bea>"]
+   },
+   {
+    "def": "over",
+    "name": "N592504dc469a44d69ae8c801b591613c",
+    "attributes": {
+     "xformOp": {
+      "transform": [
+       [1,0,0,0],
+       [0,1,0,0],
+       [0,0,1,0],
+       [7,0,1,1]
+      ]
+     }
+    }
+  }
+]
+```
