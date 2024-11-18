@@ -2,6 +2,8 @@
 
 ## Find the other class of the wall
 
+> Besides 'IfcWall' the wall in our hello-wall example has another class associated to it. Can you find it? Post the 'code' and 'URI' here.
+
 Besides the `"Ifc5:class" "IfcWall"`, the wall in the hello-wall example also has the `"nlsfb:class" "21.21"` associated to it, which is defined on lines 671 - 680:
 
 ```json
@@ -22,6 +24,12 @@ So:
 ```
 
 ## Split the hello wall example in 3 files
+
+> Use https://ifc5.technical.buildingsmart.org/viewer/Links to an external site. to view the 'Hello Wall' example.
+> 
+> Then take the hello-wall.ifcx file and split it into 3 different files. Load the 3 files all in your viewer again. Did you see the same result? Post a screenshot and/or the 3 files below.
+>
+> Tip: select all the mesh objects and put them into a separate file. That will give you geometry-data and other-data in separate files. 
 
 - [hello-wall-1.ifcx](./HelloWall/hello-wall-1.ifcx)
 - [hello-wall-2.ifcx](./HelloWall/hello-wall-2.ifcx)
@@ -44,6 +52,10 @@ A: An infinite number of files
 # Structure
 
 ## Can you find the parent of the Windows?
+
+> What is the 'name' (identifier) of the 'parent' ('host') of 'Window' and 'Window_001'? Post the 'name' below.
+>
+> Bonus: what other children does this parent have?
 
 The parent of `'Window'` and `'Window_001'` is the class defined on lines 132 - 177 of `hello-wall.ifcx`:
 
@@ -100,3 +112,17 @@ The `'name'` (identifier) of the `'parent'` ('host') of `'Window'` and `'Window_
 `"name": "N93791d5d5beb437bb8ec2f1f0ba4bf3b"`
 
 Bonus: see above for the other children of the parent of `'Window'` and `'Window_001'`.
+
+## Why the extra 'inherits layer' in the tree?
+
+> Look at the Miro board of the example: https://miro.com/app/board/uXjVLFWyplw=/?share_link_id=723521721515Links to an external site.
+>
+> The 'classical' tree structure of IFC with project -> site -> building -> building storey -> etc.. is clearly visible in the viewer. But in the JSON structure there is an extra abstraction layer that uses 'inheritance' and 'children' of the abstract parent.
+>
+> This is clearly done intentional. Why is that? If you think you have the answer, post it below.
+
+Adding an additional layer that uses 'inheritance' and 'children' makes IFC 5 more modular than previous versions of IFC.
+
+This is what allows one to build up an IFC 5 model from multiple `.ifcx` files.
+
+Moreover, it makes it easier to swap out geometries, classes and attributes, while not changing the tree structure.
