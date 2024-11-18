@@ -218,4 +218,53 @@ A:
 
 The new opening isn't really added to the wall. Rather the wall mesh is completely overwritten. See [`hole-in-hello-wall.ifcx`](./3rdWindow/hole-in-hello-wall.ifcx)
 
-## How would you add a second buildingstorey?
+## How would you add a second building storey?
+
+A second wall can be added like this:
+
+```json
+[
+  {
+    "def": "over",
+    "type": "UsdGeom:Xform",
+    "name": "N44af358b316040638a89a868335ff3b5",
+    "comment": "Add a child to My_storey.",
+    "children": [
+      {
+        "def": "def",
+        "name": "2nd_Wall",
+        "inherits": [
+          "</N93791d5d5beb437bb8ec2f1f0ba4bf3c>"
+        ]
+      }
+    ]
+  },
+  {
+    "def": "class",
+    "type": "UsdGeom:Xform",
+    "comment": "this is the instance of 2nd_Wall, which inherits from Wall, which has GUID N93791d5d5beb437bb8ec2f1f0ba4bf3b",
+    "name": "N93791d5d5beb437bb8ec2f1f0ba4bf3c",
+    "inherits": [
+      "</N93791d5d5beb437bb8ec2f1f0ba4bf3b>"
+    ]
+  },
+  {
+    "def": "over",
+    "name": "N93791d5d5beb437bb8ec2f1f0ba4bf3c",
+    "attributes": {
+      "xformOp": {
+        "transform": [
+          [1,0,0,0],
+          [0,1,0,0],
+          [0,0,1,0],
+          [0,0,3,1]
+        ]
+      }
+    }
+  }
+]
+```
+
+In the same way a second story, which has "Wall" as a child can also be added in a very similar way. See the image below and the file attached.
+
+What I don't get however, is how you can then rename the children, because now that I created an additional instance of the "Wall" class or "My_Storey" class all the children of those classes have the same names as on the original "Wall" and "My_Storey" classes.
