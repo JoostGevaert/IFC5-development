@@ -166,7 +166,9 @@ A:
 - IFC 5 leaves the order of the layers (files/data-streams) to the end-user(s).
 - While USD focusses on one 'truth' that is displayed, IFC 5 expects software tools to show differences of opinion from different layers.
 
-# Add a 3rd window
+# Add stuff
+
+## 3rd window
 
 ```json
 [
@@ -211,3 +213,9 @@ A:
   }
 ]
 ```
+
+## Opening for the 3rd window in the wall body
+
+The new opening isn't really added to the wall. Rather the wall mesh is completely overwritten. See [`hole-in-hello-wall.ifcx`](./3rdWindow/hole-in-hello-wall.ifcx)
+
+## How would you add a second buildingstorey?
