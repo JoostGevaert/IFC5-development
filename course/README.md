@@ -1,3 +1,9 @@
+# IFC 5
+
+> While IFC 5 incorporates some terms and concepts from USD, IFC 5 remains fundamentally distinct and purpose-built for the specific needs of the AEC (Architecture, Engineering, and Construction) industry. We are leveraging certain aspects of USD to enhance the reliability and ease of adoption of IFC 5; however, IFC 5 is not an implementation of USD, nor is USD a substitute for IFC 5. IFC 5 has unique requirements and specialised use-cases that are not addressed within USD or openUSD.
+>
+> **Our selective integration of USD terminology and concepts serves to improve IFC 5’s adoptability while ensuring that IFC 5 continues to meet the precise needs of our industry.**
+
 # Hello Wall
 
 ## Find the other class of the wall
@@ -121,8 +127,14 @@ Bonus: see above for the other children of the parent of `'Window'` and `'Window
 >
 > This is clearly done intentional. Why is that? If you think you have the answer, post it below.
 
+### Joost's answer
+
 Adding an additional layer that uses 'inheritance' and 'children' makes IFC 5 more modular than previous versions of IFC.
 
 This is what allows one to build up an IFC 5 model from multiple `.ifcx` files.
 
 Moreover, it makes it easier to swap out geometries, classes and attributes, while not changing the tree structure.
+
+### bSI's answer
+
+The extra parent/inheritance setup is used in the tree structure to make sure identification can be done on objects regardless of their location in the tree.
