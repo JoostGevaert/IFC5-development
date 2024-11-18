@@ -138,3 +138,30 @@ Moreover, it makes it easier to swap out geometries, classes and attributes, whi
 ### bSI's answer
 
 The extra parent/inheritance setup is used in the tree structure to make sure identification can be done on objects regardless of their location in the tree.
+
+# USD
+
+## IFC 5 and USD
+
+Q: What is the relationship between IFC 5 and USD (Universal Scene Description)?  
+A: IFC 5 borrows some terms and concepts from USD but remains distinct and purpose-built for specific AEC requirements.
+
+Q: IFC 5 is using the USD file format  
+A: Niet Waar
+
+Q: Which concepts/elements from USD are used in IFC 5?  
+A:
+- Def
+- Class
+- Over
+- UsdGeom:Mesh
+
+Q: Why does IFC 5 have the strong inheritance/child structure?  
+A: To link information to objects that can still change position in the tree
+
+Q: How about layers?  
+A:
+- Layers can be seen as 'files' or 'datastreams'
+- USD starts with one file and gathers all the layers it finds by following all references.
+- IFC 5 leaves the order of the layers (files/data-streams) to the end-user(s).
+- While USD focusses on one 'truth' that is displayed, IFC 5 expects software tools to show differences of opinion from different layers.
