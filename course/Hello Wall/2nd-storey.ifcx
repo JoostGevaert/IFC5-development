@@ -1,0 +1,37 @@
+{
+  "header": {
+    "id": "2nd-storey-ifcx-file-id",
+    "version": "ifcx_alpha",
+    "author": "Joost Gevaert",
+    "timestamp": "time string"
+  },
+  "imports": [],
+  "schemas": {},
+  "data": [
+    {
+      "path": "e84dc79e-fe9d-4781-9f4b-54dd435cca91",
+      "children": {
+        "My_2nd_Storey": "efe922f9-97d5-4edc-a154-ba62cb5ee570"
+      }
+    },
+    {
+      "path": "efe922f9-97d5-4edc-a154-ba62cb5ee570",
+      "inherits": {
+        "My_Storey": "44af358b-3160-4063-8a89-a868335ff3b5"
+      }
+    },
+    {
+      "path": "efe922f9-97d5-4edc-a154-ba62cb5ee570",
+      "attributes": {
+        "usd::xformop": {
+          "transform": [
+            [1,0,0,0],
+            [0,1,0,0],
+            [0,0,1,0],
+            [0,0,3,1]
+          ]
+        }
+      }
+    }
+  ]
+}
