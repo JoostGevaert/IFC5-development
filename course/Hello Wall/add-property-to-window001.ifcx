@@ -1,0 +1,18 @@
+{
+  "header": {
+    "id": "add-property-to-window001-ifcx-file-id",
+    "version": "ifcx_alpha",
+    "author": "Joost Gevaert",
+    "timestamp": "time string"
+  },
+  "imports": [],
+  "schemas": {},
+  "data": [
+    {
+      "path": "ab143723-f7b1-5368-b106-55896e88d768/My_Project/My_Site/My_Building/My_Storey/Wall/Window_001",
+      "attributes": {
+        "bsi::ifc::prop::isexternal": false
+      }
+    }
+  ]
+}
